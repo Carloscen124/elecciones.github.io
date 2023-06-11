@@ -25,10 +25,10 @@
     }
 
 
-    // function borrar($id_can){
-    //   $this->db->where("id_can",$id_can);
-    //   return $this->db->delete("candidatos");
-    // }
+    function borrar($id_can){
+      $this->db->where("id_can",$id_can);
+      return $this->db->delete("candidatos");
+    }
   }//Cierre de la clase
 
  ?>

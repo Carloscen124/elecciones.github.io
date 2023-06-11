@@ -67,12 +67,12 @@
         }
       }
 
-      // public function eliminar($id_can){
-      //   if ($this->Candidato->borrar($id_can)){
-      //     redirect('Candidatos/lista');
-      //   } else {
-      //     echo "ERROR AL BORRAR CANDIDATO:(";
-      //   }
-      // }
+      public function eliminar($id_can){
+        if ($this->Candidato->borrar($id_can)){
+          redirect('Candidatos/lista');
+        } else {
+          echo "ERROR AL BORRAR CANDIDATO:(";
+        }
+      }
   }
  ?>
