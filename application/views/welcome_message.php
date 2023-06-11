@@ -60,3 +60,41 @@
     </div>
   </div>
 </div>
+
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem; height: 20rem;">
+        <img class="card-img-top" src="<?php echo base_url(); ?>/plantilla/img/2.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Las elecciones son la piedra angular de la democracia, donde los ciudadanos ejercen su poder para elegir a sus líderes y forjar su futuro colectivo.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem; height: 20rem;">
+        <img class="card-img-top" src="<?php echo base_url(); ?>/plantilla/img/3.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">El voto es una herramienta poderosa que permite a los ciudadanos influir en la dirección de su país y expresar su voluntad política de manera pacífica y justa.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card" style="width: 18rem; height: 20rem;">
+        <img class="card-img-top" src="<?php echo base_url(); ?>/plantilla/img/4.jpg" alt="Card image cap">
+        <div class="card-body">
+          <p class="card-text">Cada elección es una oportunidad para cambiar el rumbo de una nación, forjar alianzas y fortalecer los valores fundamentales de la sociedad.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<br>
+
+<div class="col-md-12">
+  <img src="<?php echo base_url(); ?>/plantilla/img/footer.jpg" alt="final" width="100%" height="400px">
+</div>
