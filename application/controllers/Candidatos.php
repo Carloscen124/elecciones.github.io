@@ -30,9 +30,17 @@
           $this->load->view('footer');
     }
 
-    public function presidentes(){
+    public function general(){
+          $dato["lugares"]=$this->Candidato->obtenerLugar();
           $this->load->view('header');
-          $this->load->view('candidatos/presidentes');
+          $this->load->view('candidatos/general',$dato);
+          $this->load->view('footer');
+    }
+
+    public function presidentes(){
+          $dato["lugares"]=$this->Candidato->obtenerLugar();
+          $this->load->view('header');
+          $this->load->view('candidatos/presidentes',$dato);
           $this->load->view('footer');
     }
 

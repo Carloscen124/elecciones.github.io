@@ -29,6 +29,15 @@
       $this->db->where("id_can",$id_can);
       return $this->db->delete("candidatos");
     }
+
+    function obtenerLugar(){
+        $listadoLugares=$this->db->get("candidatos");
+        if ($listadoLugares->num_rows()
+            > 0) {
+          return $listadoLugares->result();
+        }
+        return false;
+      }
   }//Cierre de la clase
 
  ?>

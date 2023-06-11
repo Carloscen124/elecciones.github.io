@@ -49,14 +49,19 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-md-3">
-      <a href="<?php echo site_url() ?>/candidatos/presidentes"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="presidente">REPORTE PRESIDENTES</p></a>
+    <div class="col-md-6">
+      <a href="<?php echo site_url() ?>/candidatos/general"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="presidente">REPORTE GENERAL</p></a>
     </div>
-    <div class="col-md-4">
-      <a href="<?php echo site_url() ?>/candidatos/nacionales"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="nacionales">REPORTE ASAMBLEISTAS NACIONALES</p></a>
+    <div class="col-md-6">
+      <a href="<?php echo site_url() ?>/candidatos/presidentes"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="nacionales">REPORTE PRESIDENTES </p></a>
     </div>
-    <div class="col-md-5">
-      <a href="<?php echo site_url() ?>/candidatos/provinciales"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="provinciales">REPORTE ASAMBLEISTAS PROVINCIALES</p></a>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <a href="<?php echo site_url() ?>/candidatos/nacionales"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="nacionales">REPORTE ASAMBLEÍSTAS NACIONALES</p></a>
+    </div>
+    <div class="col-md-6">
+      <a href="<?php echo site_url() ?>/candidatos/provinciales"><p><img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="provinciales">REPORTE ASAMBLEÍSTAS PROVINCIALES</p></a>
     </div>
   </div>
 </div>
