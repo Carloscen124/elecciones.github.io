@@ -25,7 +25,7 @@
 						var marcadorpro=new google.maps.Marker({
 								position:coordenadaPro,
 								title: "<?php echo $proTemporal->apellido; ?>",
-                icon:"<?php echo base_url(); ?>/plantilla/img/provinciales.png",
+                icon:"<?php echo base_url(); ?>/plantilla/img/placeholder.png",
 								map:mapaPro
 						});
 						<?php endforeach; ?>

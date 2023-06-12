@@ -31,9 +31,9 @@
     }
 
     public function general(){
-          $datas['candidatos']=$this->Candidato->obtenerTodos();
+          $data['candidatos']=$this->Candidato->obtenerTodos();
           $this->load->view('header');
-          $this->load->view('candidatos/general',$datas);
+          $this->load->view('candidatos/general',$data);
           $this->load->view('footer');
     }
 

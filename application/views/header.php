@@ -30,7 +30,7 @@
 
     <!-- Template Stylesheet -->
     <link href="<?php echo base_url(); ?>/plantilla/css/style.css" rel="stylesheet">
-    
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoObNZz2rn6AMxGvMKq1GDTFvd7CzGwdY&libraries=places&callback=initMap">
     </script>
 

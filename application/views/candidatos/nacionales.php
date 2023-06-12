@@ -25,7 +25,7 @@
 						var marcadorpre=new google.maps.Marker({
 								position:coordenadaNac,
 								title: "<?php echo $nacTemporal->apellido; ?>",
-                icon:"<?php echo base_url(); ?>/plantilla/img/nacionales.png",
+                icon:"<?php echo base_url(); ?>/plantilla/img/nac.png",
 								map:mapaNacional
 						});
 						<?php endforeach; ?>
