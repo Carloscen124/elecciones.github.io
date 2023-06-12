@@ -38,21 +38,21 @@
     }
 
     public function presidentes(){
-          $data['candidatos']=$this->Candidato->obtenerTodos();
+          $data['candidatos']=$this->Candidato->obtenerPre();
           $this->load->view('header');
           $this->load->view('candidatos/presidentes',$data);
           $this->load->view('footer');
     }
 
     public function nacionales(){
-          $data['candidatos']=$this->Candidato->obtenerTodos();
+          $data['candidatos']=$this->Candidato->obtenerNac();
           $this->load->view('header');
           $this->load->view('candidatos/nacionales',$data);
           $this->load->view('footer');
     }
 
     public function provinciales(){
-          $data['candidatos']=$this->Candidato->obtenerTodos();
+          $data['candidatos']=$this->Candidato->obtenerPro();
           $this->load->view('header');
           $this->load->view('candidatos/provinciales',$data);
           $this->load->view('footer');

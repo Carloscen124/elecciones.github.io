@@ -39,10 +39,38 @@
         return false;
       }
 //MAPA PRESIDENTES
-
+    function obtenerPre(){
+        $Value = "Presidente";
+        $this->db->where("dignidad",$Value);
+        $listadoCandidatos=$this->db->get("candidatos");
+        if ($listadoCandidatos->num_rows()
+            > 0) {
+          return $listadoCandidatos->result();
+          }
+          return false;
+        }
 //MAPA PROVINCIALES
-
+    function obtenerPro(){
+        $Value = "Asambleista Provincial";
+        $this->db->where("dignidad",$Value);
+        $listadoCandidatos=$this->db->get("candidatos");
+        if ($listadoCandidatos->num_rows()
+            > 0) {
+              return $listadoCandidatos->result();
+            }
+            return false;
+          }
 //MAPA NACIONALES
+      function obtenerNac(){
+          $Value = "Asambleista Nacional";
+          $this->db->where("dignidad",$Value);
+          $listadoCandidatos=$this->db->get("candidatos");
+          if ($listadoCandidatos->num_rows()
+              > 0) {
+                return $listadoCandidatos->result();
+              }
+              return false;
+            }
 
 
   }//Cierre de la clase

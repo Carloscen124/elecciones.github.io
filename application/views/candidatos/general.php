@@ -1,6 +1,6 @@
 
 		<br>
-		<h1 class="text-center">REPORTE GENERAL</h1>
+		<h1 class="text-center">REPORTE GENERAL CANDIDATOS</h1>
 		<br>
 		<div class="container">
 				<div class="col-md-12">
