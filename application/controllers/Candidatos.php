@@ -1,9 +1,9 @@
 <?php
+
   /**
    *
    */
-  class Candidatos extends CI_Controller
-  {
+  class Candidatos extends CI_Controller  {
 
     function __construct()
     {
@@ -31,28 +31,30 @@
     }
 
     public function general(){
-          $dato["lugares"]=$this->Candidato->obtenerLugar();
+          $datas['candidatos']=$this->Candidato->obtenerTodos();
           $this->load->view('header');
-          $this->load->view('candidatos/general',$dato);
+          $this->load->view('candidatos/general',$datas);
           $this->load->view('footer');
     }
 
     public function presidentes(){
-          $dato["lugares"]=$this->Candidato->obtenerLugar();
+          $data['candidatos']=$this->Candidato->obtenerTodos();
           $this->load->view('header');
-          $this->load->view('candidatos/presidentes',$dato);
+          $this->load->view('candidatos/presidentes',$data);
           $this->load->view('footer');
     }
 
     public function nacionales(){
+          $data['candidatos']=$this->Candidato->obtenerTodos();
           $this->load->view('header');
-          $this->load->view('candidatos/nacionales');
+          $this->load->view('candidatos/nacionales',$data);
           $this->load->view('footer');
     }
 
     public function provinciales(){
+          $data['candidatos']=$this->Candidato->obtenerTodos();
           $this->load->view('header');
-          $this->load->view('candidatos/provinciales');
+          $this->load->view('candidatos/provinciales',$data);
           $this->load->view('footer');
     }
 

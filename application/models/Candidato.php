@@ -29,15 +29,22 @@
       $this->db->where("id_can",$id_can);
       return $this->db->delete("candidatos");
     }
-
-    function obtenerLugar(){
-        $listadoLugares=$this->db->get("candidatos");
-        if ($listadoLugares->num_rows()
+//MAPA GENERAL
+    function obtenerTodos(){
+        $listadoCandidatos=$this->db->get("candidatos");
+        if ($listadoCandidatos->num_rows()
             > 0) {
-          return $listadoLugares->result();
+          return $listadoCandidatos->result();
         }
         return false;
       }
+//MAPA PRESIDENTES
+
+//MAPA PROVINCIALES
+
+//MAPA NACIONALES
+
+
   }//Cierre de la clase
 
  ?>

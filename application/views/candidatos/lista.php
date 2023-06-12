@@ -67,6 +67,8 @@
             </td>
             <td class="text-center">
               <a href="<?php echo site_url(); ?>/Candidatos/eliminar/<?php echo $filatemporal->id_can?>" title="Eliminar Candidato" style="color:red;" onclick="return confirm('¿Está seguro de eliminar de forma permanente el registro seleccionado?')"><i class="bi bi-person-x"></i></a>
+              &nbsp;
+              <a href="<?php echo site_url(); ?>/Candidatos/reporte/" title="Visualizar Candidato" style="color:blue;"><i class="bi bi-geo-alt"></i></a>
             </td>
           </tr>
         <?php endforeach; ?>
