@@ -24,7 +24,7 @@
 						var coordenadaNac=new google.maps.LatLng(<?php echo $nacTemporal->latitud; ?>, <?php echo $nacTemporal->longitud; ?>);
 						var marcadorpre=new google.maps.Marker({
 								position:coordenadaNac,
-								title: "<?php echo $nacTemporal->apellido ; ?>",
+								title: "<?php echo $nacTemporal->apellido; ?>",
                 icon:"<?php echo base_url(); ?>/plantilla/img/nacionales.png",
 								map:mapaNacional
 						});
