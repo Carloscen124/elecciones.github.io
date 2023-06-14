@@ -51,7 +51,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="<?php echo site_url() ?>" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary">ELECCIONES</h3>
+                    <h4 class="text-success">ECU ELECCIONES</h4>
                 </a>
                 <div class="navbar-nav w-100">
                     <a href="<?php echo site_url() ?>" class="nav-item nav-link"><i class="bi bi-house"></i>&nbsp; Inicio</a>

@@ -29,7 +29,8 @@
           <th class="table-heading">NOMBRES</th>
           <th class="table-heading">MOVIMIENTO</th>
           <th class="table-heading">PROVINCIA</th>
-          <th class="table-heading">CANTON</th>
+          <th class="table-heading">CANTÓN</th>
+          <th class="table-heading">TIPO</th>
           <th class="table-heading">LATITUD</th>
           <th class="table-heading">LONGITUD</th>
           <th class="table-heading">ACCIONES</th>
@@ -58,6 +59,9 @@
             </td>
             <td>
               <?php echo $filatemporal->canton?>
+            </td>
+            <td>
+              <?php echo $filatemporal->tipo?>
             </td>
             <td>
               <?php echo $filatemporal->latitud?>

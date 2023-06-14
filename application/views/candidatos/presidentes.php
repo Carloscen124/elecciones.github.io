@@ -1,6 +1,6 @@
 
 		<br>
-		<div class="container bg-warning text-center">
+		<div class="container bg-danger text-center">
 			&nbsp;
 		  <h1>REPORTE CANDIDATOS PRESIDENTES</h1>
 			&nbsp;
@@ -19,8 +19,8 @@
 						document.getElementById('mapaLugar'),
 						{
 							center:centro,
-							zoom: 10,
-							mapTypeId:google.maps.MapTypeId.HYBRID
+							zoom: 7,
+							mapTypeId:google.maps.MapTypeId.ROADMAP
 						}
 					);
 				<?php if($candidatos): ?>

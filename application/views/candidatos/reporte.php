@@ -50,5 +50,9 @@
       <img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="provinciales">
       REPORTE ASAMBLEÍSTAS PROVINCIALES
     </a>
+    <a href="<?php echo site_url() ?>/candidatos/tipo">
+      <img src="<?php echo base_url(); ?>/plantilla/img/1.png" alt="tipo">
+      REPORTE TIPO MOVIMIENTO
+    </a>
   </div>
 </div>

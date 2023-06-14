@@ -9,10 +9,9 @@
 		<div class="container">
 			<div class="row" >
 				<div class="col-md-3">
-						<h3>MARCADORES CANDIDATOS</h3>
-						<p > <img src="<?php echo base_url(); ?>/plantilla/img/presidentes.png" alt="">Presidente</p>
-						<p> <img src="<?php echo base_url(); ?>/plantilla/img/placeholder.png" alt="">Asambleista Provincial</p>
-						<p> <img src="<?php echo base_url(); ?>/plantilla/img/nac.png" alt="">Asambleista Nacional</p>
+						<h3>MARCADORES TIPO MOVIMIENTO</h3>
+						<p > <img src="<?php echo base_url(); ?>/plantilla/img/presidentes.png" alt="">Movimiento Izquierda</p>
+						<p> <img src="<?php echo base_url(); ?>/plantilla/img/placeholder.png" alt="">Movimiento Derecha</p>
 				</div>
 					<div class="col-md-9">
 						<div id="mapaLugares" style="height:600px; width:100%; border:2px solid black;"></div>
@@ -34,12 +33,10 @@
 
 		    <?php if($candidatos): ?>
 		      <?php foreach($candidatos as $lugarTemporal): ?>
-		        <?php if($lugarTemporal->dignidad == "Presidente"): ?>
+		        <?php if($lugarTemporal->tipo == "Izquierda"): ?>
 		          var icono = "<?php echo base_url(); ?>/plantilla/img/presidentes.png";
-		        <?php elseif($lugarTemporal->dignidad == "Asambleista Provincial"): ?>
+		        <?php elseif($lugarTemporal->tipo == "Derecha"): ?>
 		          var icono = "<?php echo base_url(); ?>/plantilla/img/placeholder.png";
-		        <?php elseif($lugarTemporal->dignidad == "Asambleista Nacional"): ?>
-		          var icono = "<?php echo base_url(); ?>/plantilla/img/nac.png";
 		        <?php else: ?>
 		          var icono = null;
 		        <?php endif; ?>

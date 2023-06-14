@@ -1,8 +1,4 @@
 <?php
-
-  /**
-   *
-   */
   class Candidatos extends CI_Controller  {
 
     function __construct()
@@ -37,6 +33,13 @@
           $this->load->view('footer');
     }
 
+    public function tipo(){
+          $data['candidatos']=$this->Candidato->obtenerTipo();
+          $this->load->view('header');
+          $this->load->view('candidatos/tipo',$data);
+          $this->load->view('footer');
+    }
+
     public function presidentes(){
           $data['candidatos']=$this->Candidato->obtenerPre();
           $this->load->view('header');
@@ -67,6 +70,7 @@
           "movimiento"=>$this->input->post('movimiento'),
           "provincia"=>$this->input->post('provincia'),
           "canton"=>$this->input->post('canton'),
+          "tipo"=>$this->input->post('tipo'),
           "latitud"=>$this->input->post('latitud'),
           "longitud"=>$this->input->post('longitud')
         );
@@ -81,7 +85,7 @@
         if ($this->Candidato->borrar($id_can)){
           redirect('Candidatos/lista');
         } else {
-          echo "ERROR AL BORRAR CANDIDATO:(";
+          echo "<h1>ERROR AL BORRAR CANDIDATO</h1>";
         }
       }
   }

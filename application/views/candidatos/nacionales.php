@@ -1,8 +1,8 @@
 
 		<br>
-		<div class="container bg-primary text-center">
+		<div class="container bg-dark text-center">
 			&nbsp;
-		  <h1>REPORTE CANDIDATOS ASAMBLEÍSTAS NACIONALES</h1>
+		  <h1 style="color:white;">REPORTE CANDIDATOS ASAMBLEÍSTAS NACIONALES</h1>
 			&nbsp;
 		</div>
 		<br>
@@ -19,7 +19,7 @@
 						document.getElementById('mapaNacional'),
 						{
 							center:centro,
-							zoom: 10,
+							zoom: 7,
 							mapTypeId:google.maps.MapTypeId.HYBRID
 						}
 					);

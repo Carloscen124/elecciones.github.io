@@ -1,6 +1,6 @@
 
 		<br>
-		<div class="container bg-danger text-center">
+		<div class="container bg-primary text-center">
 			&nbsp;
 		  <h1>REPORTE CANDIDATOS ASAMBLEÍSTAS PROVINCIALES</h1>
 			&nbsp;
@@ -18,7 +18,7 @@
 						document.getElementById('mapaProvincial'),
 						{
 							center:centro,
-							zoom: 10,
+							zoom: 7,
 							mapTypeId:google.maps.MapTypeId.HYBRID
 						}
 					);

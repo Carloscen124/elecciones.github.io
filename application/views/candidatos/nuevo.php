@@ -6,13 +6,22 @@
   label {
     color: black;
   }
+  #mapaUbicacion {
+  height: 400px;
+  width: 50%;
+  border: 2px solid black;
+  margin: 0 auto; /* Add this line to center the map horizontally */
+  }
+
 
 </style>
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-md-12 text-center" style="background-color:#55E0D6 ">
-      <h1 style="color:white">NUEVO CANDIDATO</h1>
+    <div class="col-md-12 text-center" style="background-color:#B07669 ">
+      &nbsp;
+      <h1 style="color:black">NUEVO CANDIDATO</h1>
+      &nbsp;
     </div>
   </div>
 </div>
@@ -82,11 +91,23 @@
           name="canton" value="" id="canton">
       </div>
       <div class="col-md-4">
+        <label for="">Tipo:</label>
+        <select class="form-select" name="tipo" id="tipo">
+                <option selected>Seleccione el tipo de movimiento al que pertenece</option>
+                <option value="Izquierda">Izquierda</option>
+                <option value="Derecha">Derecha</option>
+        </select>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <h1>COORDENADAS UBICACIÓN</h1>
+      <div class="col-md-4">
           <label for="">Latitud:</label>
           <br>
           <input type="text"
           placeholder="Ingrese la latitud"
-          class="form-control"
+          class="form-control" readonly
           name="latitud" value="" id="latitud">
       </div>
       <div class="col-md-4">
@@ -94,12 +115,19 @@
           <br>
           <input type="text"
           placeholder="Ingrese la longitud"
-          class="form-control"
+          class="form-control" readonly
           name="longitud" value="" id="longitud">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="mapaUbicacion" style="height:400px; width:60%; border:2px solid black"></div>
       </div>
     </div>
 
     <br>
+
     <div class="row">
         <div class="col-md-12 text-center">
             <button type="submit" name="button"
@@ -114,3 +142,31 @@
     </div>
   </div>
 </form>
+
+
+</form>
+
+<script type="text/javascript">
+function initMap(){
+  var coordenadaCentry=new google.maps.LatLng(-1.3819240058299596, -78.68875618841503);
+  var mapa5=new google.maps.Map(document.getElementById('mapaUbicacion'),
+  {
+  center: coordenadaCentry,
+  zoom:7,
+  mapTypeId:'roadmap'
+  });
+
+  var marcador2=new google.maps.Marker({
+    position:coordenadaCentry,
+    map:mapa5,
+    title:"Seleccione la dirección",
+    icon:"<?php echo base_url(); ?>/plantilla/img/2.png",
+    draggable:true
+  })
+  google.maps.event.addListener(marcador2,'dragend',function(){
+    // alert("Se termino el drags");
+    document.getElementById('latitud').value=this.getPosition().lat();
+    document.getElementById('longitud').value=this.getPosition().lng();
+  });
+}
+</script>

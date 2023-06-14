@@ -38,6 +38,15 @@
         }
         return false;
       }
+      //MAPA GENERAL
+          function obtenerTipo(){
+              $listadoCandidatos=$this->db->get("candidatos");
+              if ($listadoCandidatos->num_rows()
+                  > 0) {
+                return $listadoCandidatos->result();
+              }
+              return false;
+            }
 //MAPA PRESIDENTES
     function obtenerPre(){
         $Value = "Presidente";
