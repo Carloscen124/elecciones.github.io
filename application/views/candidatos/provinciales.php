@@ -1,7 +1,10 @@
 
 		<br>
-		<h1 class="text-center">REPORTE PROVINCIALES</h1>
-		<br>
+		<div class="container bg-danger text-center">
+			&nbsp;
+		  <h1>REPORTE CANDIDATOS ASAMBLEÍSTAS PROVINCIALES</h1>
+			&nbsp;
+		</div>		<br>
 		<div class="container">
 				<div class="col-md-12">
 					<div id="mapaProvincial" style="height:600px; width:100%; border:2px solid black;"></div>
@@ -24,7 +27,7 @@
 						var coordenadaPro=new google.maps.LatLng(<?php echo $proTemporal->latitud; ?>, <?php echo $proTemporal->longitud; ?>);
 						var marcadorpro=new google.maps.Marker({
 								position:coordenadaPro,
-								title: "<?php echo $proTemporal->apellido; ?>",
+								title: "<?php echo $proTemporal->movimiento; ?>",
                 icon:"<?php echo base_url(); ?>/plantilla/img/placeholder.png",
 								map:mapaPro
 						});

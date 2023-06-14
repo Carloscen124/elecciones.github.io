@@ -1,6 +1,10 @@
 
 		<br>
-		<h1 class="text-center">REPORTE NACIONALES</h1>
+		<div class="container bg-primary text-center">
+			&nbsp;
+		  <h1>REPORTE CANDIDATOS ASAMBLEÍSTAS NACIONALES</h1>
+			&nbsp;
+		</div>
 		<br>
 		<div class="container">
 				<div class="col-md-12">
@@ -24,7 +28,7 @@
 						var coordenadaNac=new google.maps.LatLng(<?php echo $nacTemporal->latitud; ?>, <?php echo $nacTemporal->longitud; ?>);
 						var marcadorpre=new google.maps.Marker({
 								position:coordenadaNac,
-								title: "<?php echo $nacTemporal->apellido; ?>",
+								title: "<?php echo $nacTemporal->movimiento; ?>",
                 icon:"<?php echo base_url(); ?>/plantilla/img/nac.png",
 								map:mapaNacional
 						});

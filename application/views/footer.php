@@ -21,6 +21,8 @@
    </div>
 
    <!-- JavaScript Libraries -->
+   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCoObNZz2rn6AMxGvMKq1GDTFvd7CzGwdY&libraries=places&callback=initMap">
+   </script>
    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
    <script src="<?php echo base_url(); ?>/plantilla/lib/chart/chart.min.js"></script>
    <script src="<?php echo base_url(); ?>/plantilla/lib/easing/easing.min.js"></script>

@@ -1,6 +1,10 @@
 
 		<br>
-		<h1 class="text-center">REPORTE PRESIDENTES</h1>
+		<div class="container bg-warning text-center">
+			&nbsp;
+		  <h1>REPORTE CANDIDATOS PRESIDENTES</h1>
+			&nbsp;
+		</div>
 		<br>
 		<div class="container">
 				<div class="col-md-12">
@@ -24,7 +28,7 @@
 						var coordenadaPre=new google.maps.LatLng(<?php echo $preTemporal->latitud; ?>, <?php echo $preTemporal->longitud; ?>);
 						var marcadorpre=new google.maps.Marker({
 								position:coordenadaPre,
-								title: "<?php echo $preTemporal->apellido; ?>",
+								title: "<?php echo $preTemporal->movimiento; ?>",
 								map:mapaLugares
 						});
 						<?php endforeach; ?>
