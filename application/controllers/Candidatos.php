@@ -88,5 +88,37 @@
           echo "<h1>ERROR AL BORRAR CANDIDATO</h1>";
         }
       }
+
+      //funcion que renderiza el formulario editar
+      public function editar($id_can){
+        $data["candidatoEditar"]=$this->Candidato->obtenerPorId($id_can);
+        $this->load->view('header');
+        $this->load->view('candidatos/editar',$data);
+        $this->load->view('footer');
+      }
+
+      //Proceso de actualizacion
+      public function procesarActualizacion()
+      {
+        $datosEditados=array(
+          "dignidad"=>$this->input->post('dignidad'),
+          "cedula"=>$this->input->post('cedula'),
+          "apellido"=>$this->input->post('apellido'),
+          "nombre"=>$this->input->post('nombre'),
+          "movimiento"=>$this->input->post('movimiento'),
+          "provincia"=>$this->input->post('provincia'),
+          "canton"=>$this->input->post('canton'),
+          "tipo"=>$this->input->post('tipo'),
+          "latitud"=>$this->input->post('latitud'),
+          "longitud"=>$this->input->post('longitud')
+        );
+        $id_can=$this->input->post("id_can");
+        if ($this->Candidato->actualizar($id_ins,$datosEditados)) {
+          redirect('candidatos/lista');
+        } else {
+          echo "<h1>ERROR ACTUALIZAR DATOS DEL CANDIDATO</h1>";
+        }
+      }
+
   }
  ?>

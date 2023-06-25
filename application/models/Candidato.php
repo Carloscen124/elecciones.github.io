@@ -29,6 +29,29 @@
       $this->db->where("id_can",$id_can);
       return $this->db->delete("candidatos");
     }
+
+  //FUNCION PARA CONSULTAR UN CANDIDATOS EN ESPECIFICO
+  function obtenerPorId($id_can)
+  {
+    $this->db->where("id_can", $id_can);
+    $candidatos = $this->db->get("candidatos");
+    if ($candidatos->num_rows() > 0) {
+      //un solo instructor con row
+      return $candidatos->row();
+    }
+    return false;
+  }
+
+  //FUNCION PARA ACTUALIZAR UN INSTRUCTOR , recibe id dle instructor nuevos datos y se envia a actualizar
+  function actualizar($id_can, $datos)
+  {
+    $this->db->where("id_can", $id_can);
+    return $this->db->update('candidatos', $datos);
+  }
+
+
+
+
 //MAPA GENERAL
     function obtenerTodos(){
         $listadoCandidatos=$this->db->get("candidatos");
