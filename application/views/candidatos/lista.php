@@ -70,7 +70,7 @@
               <?php echo $filatemporal->longitud?>
             </td>
             <td class="text-center">
-              <a href="<?php echo site_url(); ?>/Candidatos/editar/<?php echo $filatemporal->id_can?>" title="Editar Candidato" style="color:;"><i class="mdi mdi-grease-pencil"></i></a>
+              <a href="<?php echo site_url(); ?>/Candidatos/editar/<?php echo $filatemporal->id_can?>" title="Editar Candidato" style="color:;"><i class="bi bi-pencil-square"></i></a>
               &nbsp;
               <a href="<?php echo site_url(); ?>/Candidatos/eliminar/<?php echo $filatemporal->id_can?>" title="Eliminar Candidato" style="color:red;" onclick="return confirm('¿Está seguro de eliminar de forma permanente el registro seleccionado?')"><i class="bi bi-person-x"></i></a>
               &nbsp;

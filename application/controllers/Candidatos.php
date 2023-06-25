@@ -113,7 +113,7 @@
           "longitud"=>$this->input->post('longitud')
         );
         $id_can=$this->input->post("id_can");
-        if ($this->Candidato->actualizar($id_ins,$datosEditados)) {
+        if ($this->Candidato->actualizar($id_can,$datosEditados)) {
           redirect('candidatos/lista');
         } else {
           echo "<h1>ERROR ACTUALIZAR DATOS DEL CANDIDATO</h1>";

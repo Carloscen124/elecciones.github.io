@@ -29,15 +29,15 @@
 <form class="" action="<?php echo site_url(); ?>/candidatos/procesarActualizacion" method="post">
   <div class="container" id="letra">
     <div class="row">
-      <input type="hidden" name="id_can" id="id_can" value="<?php echo $instructorEditar->id_can; ?>">
+      <input type="hidden" name="id_can" id="id_can" value="<?php echo $candidatoEditar->id_can; ?>">
       <div class="col-md-4">
         <label for="">Dignidad:</label>
-        <select class="form-select" name="dignidad" id="dignidad" value="<?php echo $instructorEditar->dignidad; ?>">
-                <option selected>Seleccione la dignidad a la que pertenece</option>
-                <option value="Presidente">Presidente</option>
-                <option value="Asambleista Provincial">Asambleista Provincial</option>
-                <option value="Asambleista Nacional">Asambleista Nacional</option>
-        </select>
+           <select class="form-select" name="dignidad" id="dignidad">
+            <option value="" <?php if ($candidatoEditar->dignidad === '') echo 'selected'; ?>>Seleccione la dignidad a la que pertenece</option>
+            <option value="Presidente" <?php if ($candidatoEditar->dignidad === 'Presidente') echo 'selected'; ?>>Presidente</option>
+            <option value="Asambleista Provincial" <?php if ($candidatoEditar->dignidad === 'Asambleista Provincial') echo 'selected'; ?>>Asambleista Provincial</option>
+            <option value="Asambleista Nacional" <?php if ($candidatoEditar->dignidad === 'Asambleista Nacional') echo 'selected'; ?>>Asambleista Nacional</option>
+          </select>
       </div>
       <div class="col-md-4">
           <label for="">Cédula:</label>
@@ -45,7 +45,7 @@
           <input type="text"
           placeholder="Ingrese la cédula"
           class="form-control"
-          name="cedula" value="<?php echo $instructorEditar->cedula; ?>" id="cedula">
+          name="cedula" value="<?php echo $candidatoEditar->cedula; ?>" id="cedula">
       </div>
       <div class="col-md-4">
           <label for="">Apellidos:</label>
@@ -53,7 +53,7 @@
           <input type="text"
           placeholder="Ingrese el primer apellido"
           class="form-control"
-          name="apellido" value="<?php echo $instructorEditar->apellido; ?>" id="apellido">
+          name="apellido" value="<?php echo $candidatoEditar->apellido; ?>" id="apellido">
       </div>
     </div>
     <div class="row">
@@ -63,7 +63,7 @@
           <input type="text"
           placeholder="Ingrese los nombres"
           class="form-control"
-          name="nombre" value="<?php echo $instructorEditar->nombre; ?>" id="nombre">
+          name="nombre" value="<?php echo $candidatoEditar->nombre; ?>" id="nombre">
       </div>
       <div class="col-md-4">
           <label for="">Movimiento:</label>
@@ -71,7 +71,7 @@
           <input type="text"
           placeholder="Ingrese el movimiento"
           class="form-control"
-          name="movimiento" value="<?php echo $instructorEditar->movimiento; ?>" id="movimiento">
+          name="movimiento" value="<?php echo $candidatoEditar->movimiento; ?>" id="movimiento">
       </div>
       <div class="col-md-4">
         <label for="">Provincia:</label>
@@ -79,7 +79,7 @@
         <input type="text"
         placeholder="Ingrese la provincia"
         class="form-control"
-        name="provincia" value="<?php echo $instructorEditar->provincia; ?>" id="provincia">
+        name="provincia" value="<?php echo $candidatoEditar->provincia; ?>" id="provincia">
       </div>
     </div>
     <div class="row">
@@ -89,16 +89,21 @@
           <input type="text"
           placeholder="Ingrese el cantón"
           class="form-control"
-          name="canton" value="<?php echo $instructorEditar->canton; ?>" id="canton">
+          name="canton" value="<?php echo $candidatoEditar->canton; ?>" id="canton">
       </div>
       <div class="col-md-4">
         <label for="">Tipo:</label>
-        <select class="form-select" name="tipo" id="tipo" value="<?php echo $instructorEditar->tipo; ?>">
-                <option selected>Seleccione el tipo de movimiento al que pertenece</option>
-                <option value="Izquierda">Izquierda</option>
-                <option value="Derecha">Derecha</option>
-        </select>
+          <select class="form-select" name="tipo" id="tipo">
+            <option value="" <?php if ($candidatoEditar->tipo === '')
+              echo 'selected'; ?>>Seleccione el tipo de movimiento al que
+              pertenece</option>
+            <option value="Izquierda" <?php if ($candidatoEditar->tipo === 'Izquierda')
+              echo 'selected'; ?>>Izquierda</option>
+            <option value="Derecha" <?php if ($candidatoEditar->tipo === 'Derecha')
+              echo 'selected'; ?>>Derecha</option>
+          </select>
       </div>
+
     </div>
     <br>
     <div class="row">
@@ -109,7 +114,7 @@
           <input type="text"
           placeholder="Ingrese la latitud"
           class="form-control" readonly
-          name="latitud" value="<?php echo $instructorEditar->latitud; ?>" id="latitud">
+          name="latitud" value="<?php echo $candidatoEditar->latitud; ?>" id="latitud">
       </div>
       <div class="col-md-4">
           <label for="">Longitud:</label>
@@ -117,7 +122,7 @@
           <input type="text"
           placeholder="Ingrese la longitud"
           class="form-control" readonly
-          name="longitud" value="<?php echo $instructorEditar->longitud; ?>" id="longitud">
+          name="longitud" value="<?php echo $candidatoEditar->longitud; ?>" id="longitud">
       </div>
     </div>
     <br>
